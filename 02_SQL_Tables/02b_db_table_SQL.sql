@@ -18,10 +18,11 @@ USE boo;
 
 CREATE TABLE IF NOT EXISTS cats
 (
-    name VARCHAR(20),
-    age INT
+    name VARCHAR(20) NOT NULL DEFAULT "TBA",
+    age INT NOT NULL DEFAULT 0
 
 );
+
 
 SHOW TABLES;
 DESCRIBE cats;
@@ -29,5 +30,8 @@ DESCRIBE cats;
 INSERT INTO cats(name,age) VALUES ("Grizabella", 29);
 INSERT INTO cats(age,name) VALUES (35, "Alonzo");
 INSERT INTO cats VALUES ();
+
+INSERT INTO cats(age,name) VALUES (35, "Alonzo");
+INSERT INTO cats(age,name) VALUES (35, "Alonzo");
 
 SELECT * FROM cats;
